@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7/babel.min.js"></script>
+    <style>
+      :root,
+      body {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        background: #eee;
+      }
+      body {
+        display: grid;
+        background: #b3d9ff;
+
+        place-items: center;
+        place-content: center;
+      }
+      #content {
+        position: relative;
+        display: grid;
+
+        width: 210px;
+        height: 70px;
+        color: #fff;
+      }
+      .input {
+        width: 100%;
+        height: 100%;
+        font: 20 20px monaco;
+        border-radius: 8px;
+
+        text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="content"></div>
+    <script type="text/babel">
+      class KeyboardEvents extends React.Component {
+        handleKeyPress(e) {
+          alert("You pressed a key with code: " + e.charCode);
+        }
+        render() {
+          return (
+            <div>
+              <input
+                type="text"
+                placeholder="Enter a character"
+                className="input"
+                onKeyPress={(e) => this.handleKeyPress(e)}
+              />
+            </div>
+          );
+        }
+      }
+
+      ReactDOM.render(<KeyboardEvents />, document.getElementById("content"));
+    </script>
+  </body>
+</html>

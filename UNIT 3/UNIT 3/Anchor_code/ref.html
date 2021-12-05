@@ -1,0 +1,54 @@
+<script crossdomain src="https://unpkg.com/react@16/umd/react.development.js"> </script> 
+<script crossdomain src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"> </script> 
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"> </script>
+<script type='text/babel'>
+var ev;
+var colors = ['red', 'purple', 'green', 'blue', 'yellow']
+class CustomText extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.textPara = null;
+    this.setTextRef = (element) => {
+		this.textPara = element;
+	};
+    this.changeText = (e) => {   // Change the text using the raw DOM API
+		if (this.textPara){
+			ev=e;
+			console.log(typeof e)
+			console.log(e.target.value+" clicked");
+			let i = Math.floor(Math.random()*100)%5;
+			this.textPara.innerHTML=colors[i];
+			this.textPara.style.color=colors[i]; 
+			//e.preventDefault();
+			return false;
+		}
+	};  
+  }
+
+  componentDidMount() {
+	
+  }
+
+  render() {
+    // Use the `ref` callback to store a reference to the text input DOM
+    // element in an instance field (for example, this.textInput).
+	//<input
+	//	type="text"
+	//	ref={this.setTextRef}        />
+    return (
+		<div>
+			<h1 ref={this.setTextRef}>This is test</h1>	
+			<input
+				type="button"
+				value="Change the text"
+				onClick={this.changeText}        />
+		</div>
+    );
+  }
+}
+ReactDOM.render(
+	<CustomText/>,
+	document.body
+)
+</script>

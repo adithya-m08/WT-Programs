@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lifecycle</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="contents"></div>
+    <script type="text/babel">
+      class Timer extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {
+            count: 0,
+          };
+          this.timerTick = this.timerTick.bind(this);
+          console.log("Constructor!");
+        }
+
+        timerTick() {
+          this.setState((prevState) => {
+            return {
+              count: prevState.count + 1,
+            };
+          });
+        }
+
+        componentDidUpdate(prevProps, prevState) {
+          console.log("Component updated from: " + prevState.count);
+        }
+        componentDidMount() {
+          this.timer = setInterval(this.timerTick, 1000);
+
+          console.log("Component has mounted!");
+        }
+
+        render() {
+          console.log("Timer render call!");
+
+          return <h1>{this.state.count} seconds</h1>;
+        }
+      }
+
+      ReactDOM.render(
+        <div>
+          <Timer />
+        </div>,
+        document.getElementById("contents")
+      );
+    </script>
+  </body>
+</html>

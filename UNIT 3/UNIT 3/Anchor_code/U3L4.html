@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<title>React</title>
+		<script crossdomain src="https://unpkg.com/react@16/umd/react.development.js"> </script> 
+		<script crossdomain src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"> </script> 
+		<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"> </script>
+	</head>
+	<body>
+		<div id="container"></div>
+		<script type="text/babel">
+			container = document.querySelector("#container");
+			class Letter extends React.Component {
+				render() {
+					var letterStyle = {
+						padding: "20px",
+						margin: "20px",
+						backgroundColor: this.props.bgcolor,
+						color: "#333",
+						display: "inline-block",
+					}; 
+					return (
+						<div style={letterStyle}>
+							{this.props.children}
+						</div>
+					);
+				}
+			}
+			ReactDOM.render(
+				<div>
+					<Letter bgcolor="#58B3FF">A</Letter>
+					<Letter bgcolor="#FF605F">E</Letter>
+					<Letter bgcolor="#FFD52E">I</Letter>
+					<Letter bgcolor="#49DD8E">O</Letter>
+					<Letter bgcolor="#AE99FF">U</Letter>
+				</div>,
+				container
+			);
+
+		</script>
+	</body>
+</html>

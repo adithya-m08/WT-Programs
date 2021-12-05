@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7/babel.min.js"></script>
+  </head>
+  <body>
+    <script type="text/babel">
+      function HelloWorld(props) {
+        return (
+          <div title="Outer div">
+            <h1>{props.message}</h1>
+          </div>
+        );
+      }
+      ReactDOM.render(
+        <div>
+          <HelloWorld message="Welcome" />
+        </div>,
+        document.body
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title> </title>
+  <script  src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script  src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
+var txt,ev;
+			class BMICalc extends React.Component{
+				constructor(props){
+					super(props);
+					this.state={
+						name:'Bob',
+						age:22
+					}
+					this.handleChange=this.handleChange.bind(this);
+					this.handleSubmit=this.handleSubmit.bind(this);
+				}
+				handleChange=function(event){
+					var name=event.target.name;
+					var value=event.target.value
+					this.setState({
+						[name]:value
+					})
+				}
+				handleSubmit=function(event){
+					console.log("Name entered:"+this.state.name);
+					console.log("Age entered:"+this.state.age);
+					event.preventDefault();
+				}
+				render(){
+					return(
+						<form onSubmit={this.handleSubmit}>
+							<label>
+							Name:
+							</label>
+							<input name="name" value={this.state.name} onChange={this.handleChange} type="text"/>
+							<label>
+							Age:
+							</label>
+							<input name="age" value={this.state.age} onChange={this.handleChange} type="text"/>
+							<input type="submit" value="submit"/>
+						</form>
+					)
+                }
+            }
+            
+       
+ReactDOM.render(
+				<BMICalc/>,
+				document.querySelector("#root")
+			);
+  </script>
+</body>
+
+</html>
+
+<!-- // <textarea value={this.state.value}>
+								
+//                             </textarea>
+//                             <select onChange={this.handleChange} value={this.state.value}>
+//                                                     <option value="mango">Mango</option>
+//                                                             <option value="orange">Orange</option>
+//                                                         </select> -->

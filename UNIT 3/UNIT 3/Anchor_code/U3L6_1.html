@@ -1,0 +1,64 @@
+<html>
+	<head>
+		<title>React</title>
+		<script crossdomain src="https://unpkg.com/react@16/umd/react.development.js"> </script> 
+		<script crossdomain src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"> </script> 
+		<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"> </script>
+		<style>
+			h1, h2 {
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+	<!-- 
+	-->
+		<div id="container"></div>
+		<script type="text/babel">
+			class Counter extends React.Component {
+				constructor(props, context) {
+					super(props, context);
+
+					this.state = {
+						seconds: props.start
+					};
+					this.timerTick = this.timerTick.bind(this);
+				}
+				componentDidMount() {
+					this.ti = setInterval(this.timerTick, 1000);
+				}
+				timerTick() {
+					if(this.state.seconds==0)
+							clearTimeout(this.ti)
+					else
+						this.setState((prevState)=>{
+							return {
+								seconds: prevState.seconds - 1
+							}
+						});
+				}
+
+				render() {
+					return (
+						<h1>{this.state.seconds}</h1>
+					);
+				}
+			}
+			class CounterDisplay extends React.Component {
+				render() {
+					return (
+						<div>
+							<Counter start={this.props.start}/>
+							<h2>seconds </h2>
+							<h2>before the timer stops</h2>
+						</div>
+					);
+				}
+			}
+			ReactDOM.render(
+				<CounterDisplay start="30"/>,
+				document.querySelector("#container")
+			);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Clock</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="clock"></div>
+    <script type="text/babel">
+      <div id="clock"></div>;
+      function tick() {
+        const element = (
+          <div>
+            <h1>It is {new Date().toLocaleTimeString()}.</h1>
+          </div>
+        );
+        ReactDOM.render(element, document.getElementById("clock"));
+      }
+      setInterval(tick, 1000);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Discount</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="contents"></div>
+    <script type="text/babel">
+      class Current extends React.Component {
+        render() {
+          var divStyle = {
+            backgroundColor: "white",
+            border: "3px solid black",
+            padding: 30,
+            fontSize: 30,
+            fontWeight: "bold",
+          };
+
+          return (
+            <div style={divStyle}>
+              <p>Current</p>
+              {this.props.price}
+            </div>
+          );
+        }
+      }
+
+      class Previous extends React.Component {
+        render() {
+          var divStyle = {
+            backgroundColor: "white",
+            border: "3px solid black",
+            padding: 30,
+            fontWeight: "bold",
+            fontSize: 30,
+          };
+
+          return (
+            <div style={divStyle}>
+              <p>Previous</p>
+              {this.props.price}
+            </div>
+          );
+        }
+      }
+      class Outer extends React.Component {
+        constructor() {
+          super();
+          this.state = {
+            currprice: 15000,
+            prevprice: 15000,
+          };
+          this.discount = this.discount.bind(this);
+        }
+        discount() {
+          this.setState({
+            prevprice: this.state.currprice,
+            currprice: this.state.currprice - 0.15 * this.state.currprice,
+          });
+        }
+        //try out this snippet to find out why this method can't be used for this use case
+        //hint:think about the order in which the lifeycle methods are called
+        /*getSnapshotBeforeUpdate(prevProps, prevState) 
+                {
+                    console.log(prevState);
+                    prev= prevState.currprice;
+                    return prev;
+                     }*/
+        componentDidUpdate(prevProps, prevState, snapshot) {
+          console.log("Updated");
+        }
+
+        render() {
+          var bStyle = {
+            margin: "0 auto",
+            display: "block",
+            backgroundColor: "red",
+            color: "white",
+            padding: 10,
+            fontSize: 25,
+            borderRadius: 8,
+          };
+          var contStyle = { display: "flex", justifyContent: "space-between" };
+
+          return (
+            <div style={{ backgroundColor: "#fff0b3" }}>
+              <div style={contStyle}>
+                <Previous price={this.state.prevprice} />
+                <Current price={this.state.currprice} />
+              </div>
+
+              <button style={bStyle} onClick={this.discount}>
+                Apply discount{" "}
+              </button>
+            </div>
+          );
+        }
+      }
+
+      ReactDOM.render(<Outer />, document.getElementById("contents"));
+    </script>
+  </body>
+</html>

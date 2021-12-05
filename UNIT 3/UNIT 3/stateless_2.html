@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7/babel.min.js"></script>
+  </head>
+  <body>
+    <script type="text/babel">
+      function App() {
+        const greeting = "Hello Function Component!";
+        return <Headline value={greeting} />;
+      }
+      function Headline(props) {
+        return <h1>{props.value}</h1>;
+      }
+      ReactDOM.render(<App />, document.body);
+    </script>
+  </body>
+</html>

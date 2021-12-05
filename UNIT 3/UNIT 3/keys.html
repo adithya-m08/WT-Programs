@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7/babel.min.js"></script>
+    <style>
+      #content {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="content"></div>
+
+    <script type="text/babel">
+      class Student extends React.Component {
+        render() {
+          return (
+            <div>
+              <h3>
+                {this.props.name} is {this.props.age} years old
+              </h3>
+            </div>
+          );
+        }
+      }
+
+      class List extends React.Component {
+        students = [
+          { id: 1, name: "Amal", age: 25 },
+          { id: 2, name: "Mark", age: 32 },
+          { id: 3, name: "Sithum", age: 28 },
+          { id: 4, name: "Tony", age: 30 },
+        ];
+        studentList = this.students.map((student) => (
+          <Student key={student.id} name={student.name} age={student.age} />
+        ));
+        render() {
+          return <div>{this.studentList}</div>;
+        }
+      }
+
+      ReactDOM.render(<List />, document.getElementById("content"));
+    </script>
+  </body>
+</html>

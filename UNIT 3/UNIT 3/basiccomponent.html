@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+ <title>React Components</title>
+ <style>
+     div{
+         border: 1px solid black;
+         padding: 10px 10px 20px 20px;
+
+     }
+ </style>
+ <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+ <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+ <script src="https://unpkg.com/@babel/standalone@7/babel.min.js"></script>
+</head>
+<body>
+ 
+    
+    <script type="text/babel">
+    
+        class Name extends React.Component {
+            render() {
+                return (<div>John</div>);}
+        }
+        class Photo extends React.Component {
+            render() {
+                return (<div>Placeholder for John's Photo</div>);
+            }
+        }
+        class IDcard extends React.Component {
+            render() {
+                return(<div>
+                <Photo/>
+                <Name/>
+                </div>
+                );}
+        }
+        ReactDOM.render(<IDcard/>,
+        document.body);
+</script>
+
+</body>
+</html>

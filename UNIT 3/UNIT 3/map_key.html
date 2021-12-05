@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title> </title>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  </head>
+
+  <body>
+    <div id="ex"></div>
+    <script type="text/babel">
+      var names = ["qaz", "xyz", "abc"];
+      ReactDOM.render(
+        <div>
+          {names.map(function (name, index) {
+            return <div key={index}>Hello,{name}!</div>;
+          })}
+        </div>,
+        document.getElementById("ex")
+      );
+    </script>
+  </body>
+</html>

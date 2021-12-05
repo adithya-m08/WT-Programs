@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7/babel.min.js"></script>
+    <style>
+      :root,
+      body {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        background: #eee;
+      }
+      body {
+        display: grid;
+        background: #b3d9ff;
+
+        place-items: center;
+        place-content: center;
+      }
+      .button {
+        position: relative;
+        display: grid;
+        background-color: #808080;
+        color: white;
+        font-family: monaco;
+        border-radius: 6px;
+        margin: 5px;
+
+        width: 250px;
+        height: 70px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="content"></div>
+    <script type="text/babel">
+      class BindingEventMethod1 extends React.Component {
+        constructor() {
+          super();
+          this.callOnClick = this.callOnClick.bind(this);
+        }
+        callOnClick() {
+          console.log("Button was clicked");
+        }
+        render() {
+          return (
+            <button className="button" onClick={this.callOnClick}>
+              {" "}
+              Click me!
+            </button>
+          );
+        }
+      }
+      class BindingEventMethod2 extends React.Component {
+        handleEvent = (event) => {
+          alert("Button was clicked");
+        };
+
+        render() {
+          return (
+            <button className="button" onClick={this.handleEvent}>
+              Click me!
+            </button>
+          );
+        }
+      }
+
+      const element = (
+        <div>
+          <BindingEventMethod1 />
+          <BindingEventMethod2 />
+        </div>
+      );
+      ReactDOM.render(element, document.getElementById("content"));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Updating Context</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="contents"></div>
+    <script type="text/babel">
+      const myContext = React.createContext();
+      class Child extends React.Component {
+        render() {
+          var bStyle = { fontSize: 15, padding: 10 };
+          return (
+            <myContext.Consumer>
+              {(value) => (
+                <button style={bStyle} onClick={value.increment}>
+                  {" "}
+                  Child Adds 1{" "}
+                </button>
+              )}
+            </myContext.Consumer>
+          );
+        }
+      }
+      class Parent extends React.Component {
+        state = {
+          num: 0,
+          increment: () => {
+            this.setState({ num: this.state.num + 1 });
+          },
+        };
+
+        render() {
+          var divStyle = { backgroundColor: "Red", fontSize: 20, color: "white", width: 150, padding: 15 };
+          return (
+            <myContext.Provider value={this.state}>
+              <div style={divStyle}> {this.state.num}</div>
+
+              <Child />
+            </myContext.Provider>
+          );
+        }
+      }
+
+      ReactDOM.render(<Parent />, document.getElementById("contents"));
+    </script>
+  </body>
+</html>

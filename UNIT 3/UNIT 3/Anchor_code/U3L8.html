@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title>React</title>
+		<script crossdomain src="https://unpkg.com/react@16/umd/react.development.js"> </script> 
+		<script crossdomain src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"> </script> 
+		<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"> </script>
+	</head>
+	<body>
+		<div id="container"></div>
+		<script type="text/babel">
+			function NameList(props){
+				const names = props.names;
+				const listItems = names.map((name, index)=>
+					<li key={index}>{name}</li>
+				);
+				return(
+					<ul>{listItems}</ul>
+					/*[ <p key="1">Batman1</p>,
+						<p key="2">Ironman1</p>,
+						<p key="3">Spiderman1</p>
+					]*/
+				)
+			}
+			const names=["Batman", "Ironman", "Spiderman"];
+			ReactDOM.render(<NameList names={names}/>,document.querySelector("#container"));
+		</script>
+	</body>
+</html>

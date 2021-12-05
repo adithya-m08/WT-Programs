@@ -1,0 +1,27 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+ <title>React Components</title>
+ <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+ <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+ <script src="https://unpkg.com/@babel/standalone@7/babel.min.js"></script>
+</head>
+<body>
+  <div id="contents"></div>
+  <script type="text/babel">
+    class Greeting extends React.Component {
+      render() {
+      return (<p>Welcome {this.props.name}</p>);
+      }
+    }
+    const element = <div>
+    <Greeting name="John"/>
+    <Greeting name="Jane"/>
+    </div>;
+    ReactDOM.render(element,document.getElementById('contents'));
+    </script> 
+  
+</script>
+</body>
+</html>
