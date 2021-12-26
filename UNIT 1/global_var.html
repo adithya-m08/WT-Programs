@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<h1>JavaScript Global scope</h1>
+	
+	<script>
+	 function createUserName() {
+        userName = "Bill";
+    }
+
+    function modifyUserName() {
+        if(userName)
+            userName = "Steve";
+    };
+
+    function showUserName() {
+        alert(userName);  
+    }
+    
+    createUserName();
+    showUserName(); 
+
+    modifyUserName();
+    showUserName();
+    </script>
+</body>
+</html>
+
+
+

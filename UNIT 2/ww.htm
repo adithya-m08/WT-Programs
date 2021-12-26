@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web worker</title>
+    <script>
+        var worker=new Worker("dowork.js");
+        worker.addEventListener("message",function(e){
+            console.log("Worker said :", e.data);
+        },false);
+        worker.postMessage("hello CLass");
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

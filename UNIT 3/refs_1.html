@@ -1,0 +1,87 @@
+
+
+    <!DOCTYPE HTML>
+    <html>
+    <head>
+    <title>Refs</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7/babel.min.js"></script>
+    <style>
+        
+        :root, body {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	background: #eee;
+}
+body {
+	display: grid;
+	background: #b3d9ff;
+
+	place-items: center;
+	place-content: center;
+}
+.button {
+	position: relative;
+	display: grid;
+    background-color: #808080;
+    color: white;
+    font-family: monaco;
+    border-radius: 6px;
+    margin:5px;
+	
+	width: 250px;
+	height: 70px;
+	
+;
+}
+.input {
+	
+	
+	
+    font: 20 20px monaco;
+	border-radius: 8px;
+
+	
+	text-shadow: 0px 2px 5px rgba(0,0,0,.1);
+}
+
+    </style>
+    </head>
+    <body>
+        <div id="content" ></div>
+        <script type="text/babel">
+        class CustomTextInput extends React.Component {
+            constructor() {
+                super();
+                this.textInput = React.createRef();
+                this.focusTextInput = this.focusTextInput.bind(this);
+            }
+
+            focusTextInput() {
+                this.textInput.current.focus();
+            }
+
+            render() {
+                return (
+                <div>
+                    <input className="input" type="text" ref={this.textInput} />
+                    <input className="button" type="button"value="Focus the text input" onClick={this.focusTextInput}
+                    />
+                </div>
+                );
+            }
+            }
+
+    
+
+             ReactDOM.render(<CustomTextInput/>, document.getElementById('content'));
+    
+            </script>
+    </body>
+    </html>
+    
+        

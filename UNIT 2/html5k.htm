@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS as Single Thread</title>
+    <script>
+        function fun1(){
+            var work = new Worker('sam.js')
+            work.onmessage = function(event){
+            alert("Loop took"+event.data+" number of times to get exe");
+            }
+        }
+        function fun2(){
+            alert("Good Morning Again!!!")
+        }
+    </script>
+</head>
+<body>
+    <input type="submit" onclick="fun1()" value="Click 1">
+    <input type="submit" onclick="fun2()" value="Click 2">
+</body>
+</html>

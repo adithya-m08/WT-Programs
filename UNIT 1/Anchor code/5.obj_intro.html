@@ -1,0 +1,38 @@
+<html>
+<head>
+	<script>
+		// JavaScript Objects
+		
+		// Method 1 : Object Literals
+		/*let item = {name:"Reebok", price:"Rs. 2000", av_qty:20};
+		document.write(item.name+" "+item.price+"<br/>");
+		item.show=function(){
+			document.write(this.name+" "+this.price+" "+this.av_qty+"<br/>");
+		};
+		item.show();
+		*/
+		// Method 2 : Object Constructors
+		function item(name, price, av_qty){
+			this.name = name;
+			this.price = price;
+			this.av_qty = av_qty;
+			/*this.show = function(){
+				document.write(this.name+" "+this.price+" "+this.av_qty+"<br/>");
+			}*/
+		}
+		
+		let item1 = new item("Reebok", "Rs. 2000", 20);
+		let item2 = new item("Nike", "Rs. 3000", 25);
+		
+		//item2.show();
+		
+		item.prototype.show = function(){
+			document.write(this.name+" "+this.price+" "+this.av_qty+"<br/>");
+		}
+		item1.show();
+		item2.show();
+	</script>
+</head>
+<body>
+</body>
+</html>

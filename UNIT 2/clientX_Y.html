@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2 onclick="coord(event)">client X&Y coordinates and the value</h2>
+    <p id="demo"></p>
+
+    <script>
+      function coord(event) {
+        var x = event.clientX;
+        var y = event.clientY;
+        var coords = "X coords: " + x + ", Y coords: " + y;
+        document.getElementById("demo").innerHTML = coords;
+      }
+    </script>
+  </body>
+</html>

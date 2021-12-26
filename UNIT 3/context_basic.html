@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Context</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7/babel.min.js"></script>
+</head>
+<body>
+ 
+    <div id="contents"></div>
+        <script type="text/babel">
+
+            class Green extends React.Component{
+                render(){
+                    var divStyle={backgroundColor:"green", padding: 30, color:"white", fontSize:30};
+
+
+                    return (
+                    <div style={divStyle}>
+                        <appContext.Consumer>
+                            {value => value.num}
+                        </appContext.Consumer>
+                    </div>);
+                }
+            }
+            class Blue extends React.Component{
+                render(){
+                    var divStyle={backgroundColor:"blue", padding: 30, color:"white", fontSize:30};
+
+
+                    return (<div style={divStyle}><Green/></div>);
+                }
+            } 
+            const appContext= React.createContext();
+
+            class Red extends React.Component{
+                constructor(){
+                    super();
+                    this.state={
+                        num:1
+                        };
+                    this.increment = this.increment.bind(this);
+                    
+                }
+                increment(){
+                            this.setState({num: this.state.num + 1});
+                        }
+                render(){
+                    var divStyle={backgroundColor:"red", padding: 30, color:"white", fontSize:30};
+                    var bStyle={backgroundColor:"yellow", padding:10, fontSize:15};
+                    
+                    
+                    return(
+                        <appContext.Provider value={this.state}>
+                        	<div style={divStyle}>
+                                {this.state.num} 
+                                <Blue/> 
+
+                            </div>
+                            <button style={bStyle} onClick={this.increment}>Click to increment </button>
+                        </appContext.Provider>);   
+                            
+                }
+            }
+            
+    
+            ReactDOM.render(<Red/>,
+            document.getElementById('contents'));
+        </script>
+
+</body>
+</html>

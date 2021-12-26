@@ -1,0 +1,11 @@
+<button id="button">Alt+Shift+Click on me!</button>
+
+<script>
+  button.onclick = function(event) 
+  {
+    if (event.altKey && event.shiftKey) 
+    {
+      alert('Hooray!It worked');
+    }
+  };
+</script>

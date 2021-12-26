@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Get the Value of an Attribute</title>
+</head>
+<body>
+    <p><a href="https://www.google.com/" target="_blank" id="myLink">Google</a></p>
+
+    <script>
+        // Selecting the element by ID attribute
+        var link = document.getElementById("myLink");
+        
+        // Getting the attributes values
+        var href = link.getAttribute("href");
+        document.write(href); // Prints: https://www.google.com/
+        document.write("<br>");
+        
+        var target = link.getAttribute("target");
+        document.write(target); // Prints: _blank
+    </script>
+</body>
+</html>

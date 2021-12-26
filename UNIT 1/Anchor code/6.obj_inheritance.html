@@ -1,0 +1,47 @@
+<html>
+<head>
+	<script>
+		// JavaScript Object Inheritance
+		
+		// Method 1 : Object Literals
+		let item = {name:"Reebok", price:"Rs. 2000", av_qty:20};
+		
+		//let item1 = Object.create(item) // creates item1 as a replica of item
+		
+		let item1 = Object.create(item, {name:{value:"Nike"}, av_qty:{value:25}, desc:{value:"Full HD"}});
+		// properties existing in item if specified, values are replaced example name and av_qty.
+		// properties existing in item if not specified, values are retained example price.
+		// properties not existing in item are added to the new object example desc
+		
+		document.write(item1.name);
+		// Method 2 : Object Constructors
+		function item(name, price, av_qty){
+			this.name = name;
+			this.price = price;
+			this.av_qty = av_qty;
+		}
+		let item1 = new item("Reebok", "Rs. 2000", 20);
+		item.prototype.show = function(){
+			document.write(this.name+" "+this.price+" "+this.av_qty+"<br/>");
+		}		
+		
+		function gc_item(name, price, av_qty, desc){
+			item.call(this, name, price, av_qty);
+			this.desc = desc;
+		}
+			
+//		document.write(gc1.name+" "+gc1.desc);
+		gc_item.prototype = item.prototype;// new item();
+		gc_item.prototype.constructor = gc_item;
+		
+		let gc1 = new gc_item("PS5", "Rs 40000", 50, "Full HD Display");
+
+		gc1.show();
+		
+		
+//		item2.show(a,b,c); // show.call(item2,a,b,c)
+	</script>
+</head>
+<body>
+</body>
+</html>

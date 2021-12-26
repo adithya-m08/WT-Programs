@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("select").change(function(){
+        var selectedOption = $(this).find(":selected").val();
+        alert("You have selected - " + selectedOption);
+    });
+});
+</script>
+</head>
+<body>
+  <form>
+        <label>City:</label>
+        <select>
+            <option>London</option>
+            <option>Paris</option>
+            <option>New York</option>
+        </select>
+    </form>
+</body>
+</html>

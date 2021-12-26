@@ -1,0 +1,22 @@
+<!doctype html>				  
+<html lang="en"> 
+<head>
+
+<title>HTML5 Page</title>
+<meta charset="utf-8"> 
+</head>
+
+<body>
+    <h1>My First HTML5 Audio page.</h1>
+    <!-- <audio src="BTS.mp3" controls></audio>	   -->
+
+    <audio id="play" src="BTS.mp3" controls></audio>
+    <div> 
+        <button onclick="document.getElementById('play').play()">Play</button> 
+        <button onclick="document.getElementById('play').pause()">Pause</button> 
+        <button onclick="document.getElementById('play').volume += 0.1">Vol+ </button> 
+        <button onclick="document.getElementById('play').volume -= 0.1">Vol- </button> 
+      </div>
+</body>
+
+</html>

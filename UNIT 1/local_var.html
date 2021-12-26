@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<h1>JavaScript Global scope</h1>
+	<p id="error"></p>
+
+	<script>
+		function createUserName() {
+			var userName = "Bill";
+		}
+
+		function showUserName() {
+			try{
+				alert(userName);
+			}
+			catch(ex)
+			{
+				document.getElementById("error").innerHTML = ex;
+			}
+		}
+
+		createUserName();
+		showUserName(); 
+	</script>
+</body>
+</html>
+
+function fun()
+{
+	var temp ="temp is defined in function scope";
+	console.log(temp); 
+}
+
+fun();
+console.log(temp);
+
+if(true)
+{
+  var v1 =10;
+  let v2=20;
+  console.log(v1);
+  console.log(v2); 
+}
+
+console.log(v1);
+console.log(v2);

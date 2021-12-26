@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+    <title>
+      Child_node
+    </title>
+</head>
+<body>
+    <main>
+        <h1>Today's articles</h1>
+      
+        <article id="article-1">
+          <h2 class="a">A chain is only as strong as its weakest link.</h2>
+          <section>
+            <p>One weak part will render the whole weak..</p>
+            <p>No matter how confident the team is, it is as strong as its weakest link – its defence.</p>
+          </section>
+        </article>
+      
+        <article id="article-2">
+            
+          <h2 class="b">All good things come to an end</h2>
+          <section>
+            <p>Good experiences eventually come to an end...</p>
+          </section>
+        </article>
+        <script>
+            let content = document.getElementById('article-2');
+            let firstChild = content.firstChild.nodeName;
+                console.log(firstChild);
+
+                let article1 = document.getElementById('article-2');
+                    console.log(article1.lastElementChild);
+        </script>
+      </main>
+</body>

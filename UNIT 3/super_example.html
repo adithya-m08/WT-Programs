@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>React!</title>
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+<!-- <style>
+    #container{
+        padding: 50px;
+        background-color: #FFF;
+
+    }
+</style> -->
+</head>
+
+<body>
+ <div id="container"></div>
+    <script type="text/babel">
+// without super()
+class A {
+  constructor() {
+    this.a = 'hello'
+  }
+}
+
+class B extends A {
+  constructor(){
+    console.log(this.a) 
+  }
+}
+
+console.log(new B())
+
+// with super()
+// class A {
+//   constructor(props) {
+//     this.props = props
+//   }
+// }
+
+// class B extends A {
+//   constructor(props) {
+//     super(props)
+//     console.log(this.props)
+//   }
+// }
+
+// console.log(new B({title: 'hello world'}))
+    </script>
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+

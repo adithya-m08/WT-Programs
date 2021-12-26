@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML5 Geo Location</title>
+</head>
+<body>
+
+    <script>
+        if(navigator.geolocation) {
+            alert("geolocation supported")
+        }
+        else{
+        alert("geolocation not supported")
+        }  
+
+        navigator.geolocation.getCurrentPosition(success,error);
+    
+    function success(positions){
+        
+        var lat=positions.coords.latitude;
+        var lon=positions.coords.longitude;
+        var acc=positions.coords.accuracy;
+                                         
+        alert("Latitute is " + lat+ ", longitude is  "+ lon + " and accuracy is " + acc );
+    }
+    
+    
+    function error(){
+        alert("geolocation is denied");
+    }
+    </script>
+</body>
+</html

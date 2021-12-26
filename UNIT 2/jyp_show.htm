@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>show demo</title>
+  <style>
+  p {
+    background: yellow;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+ 
+<button>Show it</button>
+<p style="display: none">Hello...</p>
+ 
+<script>
+$( "button" ).click(function() {
+  $( "p" ).show( "fast" );
+});
+</script>
+ 
+</body>
+</html>

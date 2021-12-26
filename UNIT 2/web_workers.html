@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Web Worker Demo </title>
+</head>
+<body>
+<h2>Validating the browser compatibility of Web Browsers</h2>
+<div id="yes"></div>
+<div id="No"></div>
+<button onclick="worker_demo();"> Submit</button>
+<script >
+function worker_demo()
+{
+if(typeof(Worker)!=="undefined"){
+document.getElementById("yes").innerHTML=" Browser Supports";
+}
+else
+{
+document.getElementById("NO").innerHTML="Browser Not Supporting the workers";}
+}
+</script>
+</body>
+</html>

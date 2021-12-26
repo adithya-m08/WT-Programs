@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>createTextNode() Method</title>
+    <style>
+      h1,
+      h2 {
+        color: blue;
+        font-weight: bold;
+      }
+      body {
+        text-align: center;
+        background-color: gold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Vacation</h1>
+    <h2>TextNode Method</h2>
+    <button onclick="fun()">Submit</button>
+    <script>
+      function fun() {
+        var x = document.createTextNode("I enjoy!!");
+        document.body.appendChild(x);
+      }
+    </script>
+  </body>
+</html>

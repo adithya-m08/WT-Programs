@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>HTML5 tags</title>
+		<script>
+			function settext(){
+				let col = document.querySelector("#colcode").value;
+				document.querySelector("#coltext").value = col;
+			}
+			function setcolor(){
+				let col = document.querySelector("#coltext").value;
+				document.querySelector("#colcode").value = col;
+			}
+		</script>
+	</head>
+	<body>
+		<form action="save.py" method="get">
+			<input id="colcode" onchange="settext()" type="color" name="ucolor"></input>
+			<input onchange="setcolor()" type="text" id="coltext"></input>
+			<input type="tel" autofocus required placeholder="xxx-xxx-xxxx" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="utel"></input>
+			<button type="submit">Submit</button>
+		</form>
+	</body>
+</html>

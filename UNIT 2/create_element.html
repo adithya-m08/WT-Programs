@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Insert New Element into the DOM</title>
+</head>
+<body>
+    <div id="main">
+		<h1 id="title">Hello World!</h1>
+		<p id="hint">This is a simple paragraph.</p>
+	</div>
+	
+	<button type="button" onclick="insertElement()">Insert Element</button>
+	
+	<script>
+	function insertElement() {
+		// Creating a new div element 
+		var newDiv = document.createElement("div");
+		 
+		// Creating a text node 
+		var newContent = document.createTextNode("Hi, how are you doing?");
+		 
+		// Adding the text node to the newly created div
+		 newDiv.appendChild(newContent);
+		 
+		// Adding the newly created element and its content into the DOM 
+		var currentDiv = document.getElementById("main"); 
+		document.body.appendChild(newDiv, currentDiv);
+
+		var currentDiv = document.getElementById("main"); 
+		document.body.insertBefore(newDiv, currentDiv);
+	}	
+	</script>
+</body>
+</html>

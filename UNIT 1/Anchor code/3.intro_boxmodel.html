@@ -1,0 +1,118 @@
+<html>
+	<head>
+		<title>My first HTML document</title>
+		<!-- 
+		Style : 
+		- inline -> syntax : style="prop:value; ..." 
+		- document/embedded -> <style> selector {prop:value;...}</style>
+		- external -> <link rel="stylesheet" type="text/css" href="mystyles.css"/> 
+		-->
+		<style>
+			h2 {
+				border-left: 5px solid black; /*border-width,  border-style and border-color */
+				border-right: 5px solid black;
+				border-top: 7px dotted blue;
+				border-bottom: 7px dotted blue;
+				
+				margin: 25px 20px 25px 20px; /* margin-top, margin-right, margin-bottom and margin-left */
+				
+				padding-top: 25px;
+				
+				position: sticky; /* absolute, relative, fixed and sticky */
+				left: 50px;
+				top: 10px;
+				
+				background-color:lightgrey;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Paragraphs -->
+		<p> This is my first paragraph contents.<br/>
+		This is the second line.
+		</p>
+		<!-- Headings -->
+		<h1>This is the heading</h1>
+		<div>
+		<h2>This is the next heading</h2>
+		<h6>This is the smallest heading</h6>
+		<!-- Lists -->
+		<!-- Unordered List, Ordered List and Definition List -->
+		<ul>
+			<li>Item 1</li>
+			<li>Item 2</li>
+		</ul>
+		<ol>
+			<li>Do this first</li>
+			<li>Do this next</li>
+			<li>Do this at the end</li>
+		</ol>
+		<dl>
+			<dt>Web Technologies</dt>
+			<dd>This is the course with interesting topics like NodeJS and ReactJS.</dd>
+			<dt>Data Science</dt>
+			<dd>This course gives a introduction to data science</dd>
+		</dl>
+		</div>
+		<!-- Tables -->
+		<table border="1px solid black">
+			<caption>Project Details</caption>
+			<tr>
+				<th rowspan=2>Sl. No.</th>
+				<th rowspan=2>Semester</th>
+				<th rowspan=2>Title</th>
+				<th colspan=2>Team Member</th>
+			</tr>
+			<tr>
+				<th>SRN</th>
+				<th>Name</th>
+			</tr>
+			<tr>
+				<th>1</th>
+				<td rowspan=2>1</td>
+				<td>Calculator using Python</td>
+				<td>PES1201901234</td>
+				<td>Sanjay</td>
+			</tr>
+			<tr>
+				<th>2</th>
+				<!--td>1</td-->
+				<td>Library Management using Python</td>
+				<td>PES1201902222</td>
+				<td>Vijay</td>
+			</tr>
+			<tr>
+				<th>3</th>
+				<td rowspan=2>2</td-->
+				<td>Calculator using C</td>
+				<td>PES1201901234</td>
+				<td>Sanjay</td>
+			</tr>
+			<tr>
+				<th>4</th>
+				<!--td>2</td-->
+				<td>Library Management using C</td>
+				<td>PES1201902222</td>
+				<td>Vijay</td>
+			</tr>
+
+		</table>
+
+		<a href="form.html">Click here to change</a>
+		<!-- Images -->
+		
+		<!-- Links -->
+		<img width="200px" heigth="120px" src="marvel.jpg" alt="Thanos"/>
+		<!-- Special Characters 
+		Char.	     Entity	               Meaning	
+		&		       &amp;	             Ampersand	
+		<		       &lt;	             Less than	
+		>		       &gt;	             Greater than	
+		”		       &quot;	             Double quote	
+		’		       &apos;	             Single quote	
+		(space)        &nbsp;		            Non-breaking space
+		-->
+		<p>A para with multiple &nbsp;&nbsp;&nbsp;&nbsp;spaces. And &quot; &amp; &apos; &lt; and &gt; </p>
+		
+	</body>
+</html>

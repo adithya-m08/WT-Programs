@@ -1,0 +1,83 @@
+
+  <!DOCTYPE HTML>
+  <html>
+  <head>
+  <title>Events</title>
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7/babel.min.js"></script>
+  <style>
+      
+      :root, body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #eee;
+}
+body {
+  display: grid;
+  background: #b3d9ff;
+
+  place-items: center;
+  place-content: center;
+}
+#content {
+  position: relative;
+  display: grid;
+  
+  
+  width: 210px;
+  height: 70px;
+  
+}
+.input {
+  
+  
+  width: 100%;
+  height: 100%;
+  font: 20 15px monaco;
+  background-color:white;
+  border-radius: 8px;
+  text-align: center;
+
+  
+  text-shadow: 0px 2px 5px rgba(0,0,0,.1);
+}
+
+  </style>
+  </head>
+  <body>
+      <div id="content" ></div>
+      <script type="text/babel">
+            class App extends React.Component {
+                constructor(){
+                    super();
+                    this.state = {message: ""};
+                }
+                handleChange(e){
+                    this.setState({message: e.target.value});
+                }
+                render() {
+                    return (
+                    <div>
+                        <h1>{this.state.message}</h1>
+
+                    <input className="input" placeholder="Type something here" onChange={this.handleChange.bind(this)} value={this.state.message} autoFocus />
+                    </div>
+                    );
+            
+            }
+            }
+            
+
+  
+
+           ReactDOM.render(<App/>, document.getElementById('content'));
+  
+          </script>
+  </body>
+  </html>
+  
+        

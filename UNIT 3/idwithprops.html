@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+ <title>ID with props
+
+ </title>
+ 
+ <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+ <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+ <script src="https://unpkg.com/@babel/standalone@7/babel.min.js"></script>
+</head>
+<body>
+ 
+    <script type="text/babel">
+    class Name extends React.Component {
+        render() {
+        var divStyle={backgroundColor: "red", color:"white", fontSize:20, padding:20, width:100, height:50, margin:10};
+        return (<div style={divStyle}>{this.props.name}</div>);}
+    }
+    class Photo extends React.Component {
+
+        render() {
+        var divStyle={backgroundColor: "green", color:"white", fontSize:15, padding:20,width:100, height:50, margin:10, borderRadius:'50vh'};
+
+        return (<div style={divStyle} >Placeholder for John's Photo</div>);}
+    }
+    class IDcard extends React.Component {
+        render() {
+        //var divStyle={display: 'flex',  justifyContent:'center',alignItems: 'center'};
+        var divStyle={backgroundColor: "blue",color:"white", fontSize:15, padding:10,width:170, height:270, margin:"auto"} ;
+
+        return(<div style={divStyle}>
+        <h1> ID </h1>
+        <Photo />
+        <Name name={this.props.name}/>
+        </div>
+   );}
+}
+    ReactDOM.render(<IDcard name="John"/>,
+    document.body);
+</script>
+
+</body>
+</html>

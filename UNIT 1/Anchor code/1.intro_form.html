@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title>My first Web Page</title>
+	</head>
+	<body>
+		<h2>Fruit Survey</h2>
+		<form method="post" action="save.php"><!--target="_blank" /-->
+			<Name: <input type="text" name="uname" />
+			<br/>Email: <input type="text" name="uemail" />
+			<br/>Address: <textarea name="uadd" rows=2 cols=20></textarea>
+			<br/>Your Favorite fruits: <input type="checkbox" name="uff" value="Apple" checked /> Apple
+			<input type="checkbox" name="uff" value="Pomegranate"/> Pomegranate
+			<input type="checkbox" name="uff" value="Orange"/> Orange
+			<br/>No. of pieces consumed daily: <input type="radio" name="unum" value="1" checked /> 1
+			<input type="radio" name="unum" value="2"/> 2
+			<input type="radio" name="unum" value="3"/> 3
+			<input type="radio" name="unum" value="4"/> 4
+			<br/>How do you consume your fruit?
+			<select name="ucon" multiple>
+				<option selected value="MilkShake">MilkShake</option>
+				<option value="Cut Fruits">Cut Fruits</option>
+				<option value="Salad">Salad</option>
+			</select>
+			<!--input type="button" value="Submit"></input-->
+			<!--input type="submit" value="submit"></input-->
+			<input type="hidden" name="uid" value="abcd1234"/>
+			<br/><button type="submit">Submit</button>
+			<button type="reset">Reset</button>
+		</form>
+	</body>
+</html>

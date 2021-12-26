@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Manipulation</title>
+  </head>
+  <body>
+    <p class="para">First Paragraph</p> <!-- 1st node -->
+    <a href="https://google.com" class="para">Welcome to Google</a> <!-- 2nd node -->
+    <input type="text" class="para" /> <!-- 3rd node -->
+  </body>
+  <script>
+    
+    //accessing the nodes with class="para"
+    var nodesHavingParaClass = document.querySelectorAll('.para'); 
+    //nodesHavingParaClass contains 1st, 2nd and 3rd nodes.
+    
+    //accessing the node with class="para"
+    var nodeHavingParaClass = document.querySelector('.para'); 
+    //nodeHavingParaClass contains only the 1st node. 
+    
+  </script>
+</html>

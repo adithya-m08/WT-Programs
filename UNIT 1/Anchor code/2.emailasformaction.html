@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title of the document</title>
+    <style>
+      div {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Give Feedback to Our Website.</h2>
+    <form action="mailto:info@w3docs.com?subject=The%20subject%20of%20the%20mail" method="post" enctype="text/plain">
+      <div>
+        <label for="uname">Name:
+          <input type="text" name="name" id="uname" />
+        </label>
+      </div>
+      <div>
+        <label for="uemail">Email:
+          <input type="text" name="email" id="uemail" />
+        </label>
+      </div>
+      <div>
+        <label for="ucomments">Comments:</label>
+        <br />
+        <textarea name="comments" id="ucomments" rows="12" cols="35">Send your comments to us.</textarea>
+      </div>
+      <div>
+        <input type="submit" value="Send" />
+        <input type="reset" value="Clear Form" />
+      </div>
+    </form>
+  </body>
+</html>

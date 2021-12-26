@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Example of jQuery Effect Method without Callback Function</title>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<style>
+    p{
+        background:yellow;
+        font-size: 24px;
+        padding:20px;
+    }
+</style>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("p").slideToggle("slow",alert("hello"));
+        // alert("The slide toggle effect has completed.");
+    });   
+});
+</script>
+</head>
+<body>
+    <p>This is paragraph.</p>
+    <button type="button">Click me</button>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html> 
+
+<html>  
+   <head> 
+      <meta charset = "utf-8"> 
+      <title>HTML5 Example </title> 
+      <style>
+        article{
+            width: 1400px;
+            border: 2px solid gray;
+            padding: 10px;
+            border-radius: 10px;
+            margin: 5px;
+        }
+        aside {
+      width: 40%;
+      float: right;
+      background-color: rgb(11, 184, 207);
+      color: white;
+      padding: 5px;
+      margin: 10px;
+      height: 100px;
+    }
+    img{
+        width: 30%;
+        
+    }
+     </style>
+   </head> 
+  
+   <body> 
+       <h1>HTML5 Document Structure</h1>
+      <header class="header1">
+          <h1>Hello Welcome</h1> 
+          <p>My page,<time>Sept 21,2021</time></p>
+        
+    </header> 
+      <nav>
+        <a href="#home">Home</a> |
+        <a href="#About">About Us</a> |
+        <a href="#contact">Contact Us</a> |
+        <a href="#our-Clients">Clients</a>
+     </nav> 
+      
+      <article> 
+          <img src="travel.jpeg" width="50%" height="50%" alt="travelling pic">
+          <h1>About travelling</h1>
+          <p> Travel is the movement of people between distant geographical locations. 
+              Travel can be done by foot, bicycle, automobile, train, boat, bus,
+               airplane, ship or other means, with or without luggage, and can be one way or round trip
+         <section> 
+             <h1> Benefits of travelling</h1>
+             <p>“The world is a book, and those who do not travel read only a page.” – said Saint Augustine. 
+                 Travelling can teach you more than any university course. 
+                 You learn about the culture of the country you visit.
+                  If you talk to locals, you will likely learn about their thinking, habits, traditions and history as well.
+             </p>      
+             
+         </section> 
+        </p>
+      </article>
+      <h1> I listen to music wen i travel</h1>
+      <audio src="BTS.mp3" controls></audio>
+      <figure>
+          <img src="travelwoman.jpg" width="100%" height="100%" alt="Women travelling pic">
+          <figcaption>Jus an image</figcaption>
+      </figure>
+      <h3>Videos tat i watch</h3>
+      <video src="shuttle.mp4" preload="auto" controls>
+          <p>If your seeing this message b/c your browser does not 
+            support video tag</p>
+      </video>
+
+      <h1> details Tag</h1> 
+      <details>
+          <summary>about my trip</summary>
+          <p> During travelling you will meet people that are very different from you. If you travel enough, you will learn to accept and appreciate these differences. 
+              Traveling makes you more open and accepting.</p>
+      </details>
+      <h1> feedback abt my trip</h1>
+      <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+        <input type="range" id="a" value="30">+<input type="number" id="b" value="35">=<output name="x" for="a b"></output>
+    </form>
+    <h1> this is progress of my trip</h1>
+    <progress id="file" value="30" max="100">
+
+    </progress>
+      <aside>
+        <h1>Aside tag example</h1>
+        <p>Aside tag content. . .</p>
+       
+      </aside> 
+      
+      <footer>
+        <p>Posted by: Me</p>
+        <p>Contact information: <a href="mailto:someone@example.com">
+        someone@example.com</a>.</p>
+        <div class="social">
+            <a href="#"><img src="instagram-icon.png" alt="insta"></a>
+    
+          </div>
+      </footer> 
+   </body> 
+</html> 

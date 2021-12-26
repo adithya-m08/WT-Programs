@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Replace an Element with another Element in the DOM</title>
+</head>
+<body>
+    <div id="main">
+		<h1 id="title">Hello World!</h1>
+		<p id="hint">This is a simple paragraph.</p>
+	</div>
+	
+    <button type="button" onclick="replaceParagraph()">Replace Paragraph</button>
+	
+	<script>
+    function replaceParagraph() {
+        var parentElem = document.getElementById("main");
+        var oldPara = document.getElementById("hint");
+
+        // Creating new elememt
+        var newPara = document.createElement("p");
+        var newContent = document.createTextNode("This is a new paragraph.");
+        newPara.appendChild(newContent);
+
+        // Replacing old paragraph with newly created paragraph
+        parentElem.replaceChild(newPara, oldPara);
+    }	
+	</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>JavaScript Select Elements with CSS Selectors</title>
+  </head>
+  <body>
+    <ul>
+      <li>Bread</li>
+      <li class="tick">Coffee</li>
+      <li>Pineapple Cake</li>
+    </ul>
+
+    <script>
+      // Selecting all li elements
+      var matches = document.querySelectorAll("ul li");
+
+      // Printing the number of selected li elements
+      document.write("Number of selected elements: " + matches.length + "<hr>");
+
+      // Printing the content of selected li elements
+      for (var elem of matches) {
+        document.write(elem.innerHTML + "<br>");
+      }
+
+      // Applying line through style to first li element with class tick
+      matches = document.querySelectorAll("ul li.tick");
+      matches[0].style.textDecoration = "line-through";
+    </script>
+  </body>
+</html>

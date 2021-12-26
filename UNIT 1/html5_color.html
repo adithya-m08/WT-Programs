@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>HTML5 Color Input Type</title>
+<script>
+    function getValue() {
+var color = document.getElementById("mycolor").value;
+        alert(color);
+    }
+</script>
+</head>
+<body>
+    <form>
+        <label for="mycolor">Select Color:</label>
+        <input type="color" value="#00ff00" id="mycolor">
+        <button type="button" onclick="getValue();">Get Value</button>
+    </form>
+</body>
+</html>                            

@@ -1,0 +1,58 @@
+
+    <!DOCTYPE HTML>
+    <html>
+    <head>
+    <title>Events</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7/babel.min.js"></script>
+    <style>
+        #content{
+            text-align: center;
+        }
+    </style>
+    </head>
+    <body>
+        <div id="content" ></div>
+        <script type="text/babel">
+    
+        class CurrentTime extends React.Component {
+            constructor() {
+                super();
+
+                var time_now = new Date();
+                this.state = {
+                    currentTime: time_now.toString()
+                    };
+                this.refreshCurrentTime=this.refreshCurrentTime.bind(this);
+                }
+
+                
+                refreshCurrentTime() {
+                    var time_now = new Date();
+                    this.setState({ currentTime: time_now.toString() });
+                }
+                render() {
+                    return (
+                    <div>
+                        <h2 style={{color:"red"}}>Current Time:</h2>
+                        <p>{this.state.currentTime}</p>
+                        <button style={{backgroundColor:"green", color:"white", fontSize:15,borderRadius:6, padding:5}}onClick={this.refreshCurrentTime}>
+                        Get Current Time!
+                        </button>
+                    </div>
+                    );
+                }
+                }
+
+             
+
+            const element=<CurrentTime/>     
+
+             ReactDOM.render(element, document.getElementById('content'));
+    
+            </script>
+    </body>
+    </html>
+    
+        

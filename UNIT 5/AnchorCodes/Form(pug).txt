@@ -1,0 +1,15 @@
+html
+html
+   head
+
+   body
+      form(action = "/", method = "POST")
+         div
+            label(for = "first") First name:
+            input(name = "first" value = "Web")
+         br
+         div
+            label(for = "last") Last name:
+            input(name = "last" value = "Technology")
+         br
+         button(type = "submit") Submit

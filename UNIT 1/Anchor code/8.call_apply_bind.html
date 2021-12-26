@@ -1,0 +1,28 @@
+<html>
+<head>
+	<script>
+		function mytostring(){
+			console.log(arguments);
+			var str="";
+			for (var i in arguments)
+				str=str+this[arguments[i]];
+			return str;
+		}
+		var obj={name:"vijay", age:"22", show:function(){}};
+		var params=["name","age"];
+
+		console.log(mytostring.call(obj,"name","age")); 
+		//call mytostring for obj with parameter list specified individually
+		
+		console.log(mytostring.apply(obj,params));
+		//call mytostring for obj with parameter list specified as an array
+		
+		var obj1={name:"sujay", age:"25", show:function(){}};
+		var objstr = mytostring.bind(obj1); 
+		// bind mytostring to obj1 and store that reference as objstr
+		
+		console.log(objstr("name","age"));// same as mytostring.call(obj)
+
+	</script>
+</head>
+</html>

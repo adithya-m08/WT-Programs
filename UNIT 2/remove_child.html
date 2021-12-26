@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Remove an Element from the DOM</title>
+</head>
+<body>
+    <div id="main">
+		<h1 id="title">Hello World!</h1>
+		<p id="hint">This is a simple paragraph.</p>
+	</div>
+	
+	<button type="button" onclick="removeElement()">Remove Element</button>
+	
+	<script>
+	function removeElement() {
+		var parentElem = document.getElementById("main");
+		var childElem = document.getElementById("hint");
+		parentElem.removeChild(childElem);
+	}
+	</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+    <title>
+      Sibling
+    </title>
+</head>
+<body>
+    <main>
+        <h1>Today's articles</h1>
+      
+        <article id="article-1">
+          <h2 class="a">A chain is only as strong as its weakest link.</h2>
+          <section>
+            <p>One weak part will render the whole weak..</p>
+            <p>No matter how confident the team is, it is as strong as its weakest link – its defence.</p>
+          </section>
+        </article>
+      
+        <article id="article-2">
+            <h2>it says</h2>
+          <h2 class="b">All good things come to an end</h2>
+          <section>
+            <p>Good experiences eventually come to an end...</p>
+          </section>
+        </article>
+        <script>
+     let current = document.querySelector('.b');
+    let nextSibling = current.nextElementSibling;
+    console.log(nextSibling);
+
+    let current1 = document.querySelector('.b');
+let prevSiblings = current.previousElementSibling;
+console.log(prevSiblings);
+        </script>
+      </main>
+</body>
+<!-- The nextElementSibling returns null if
+ the specified element is the first one in the list. -->
+<!-- The previousElementSibling property returns null
+ if the current element is the first one in the list -->

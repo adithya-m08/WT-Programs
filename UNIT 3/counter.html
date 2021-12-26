@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+ <title>Counter</title>
+ <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+ <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+ <script src="https://unpkg.com/@babel/standalone@7/babel.min.js"></script>
+</head>
+<body>
+ 
+    <div id="contents"></div>
+    <script type="text/babel">
+    class ClickMe extends React.Component{
+        constructor(){
+            super();
+            this.state={
+                clicks: 0
+            };
+            this.counter = this.counter.bind(this);
+        }
+        counter() {
+        this.setState({
+            clicks: this.state.clicks + 1
+            });
+        }
+        render(){
+            return(
+            <div>
+            <button onClick={this.counter}> Click Me! </button>
+            <h1> Number of clicks: {this.state.clicks} </h1>
+            </div>
+            
+            );
+        }
+    }
+   
+ReactDOM.render(<ClickMe/>,
+document.getElementById('contents'));
+</script>
+
+</body>
+</html>

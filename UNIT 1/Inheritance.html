@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <title>
+         Inheritance
+    </title>
+</head>
+<body>
+   <script >
+       function Parentclass(){
+           this.parent_property1="hi";
+           this.parentmethod1=function parentmenthod1(arg1){
+               return arg1 +" Parent method 1 ";
+           }
+       }
+
+       function Childclass(){
+           this.child_property1="hello";
+           this.childmethod1=function childmenthod1(arg1){
+               return arg1 +" Childmethod 1 ";
+           }
+       } 
+       Childclass.prototype=new Parentclass();
+       var  instance1= new Childclass();
+       alert(instance1 instanceof Parentclass);
+       alert(instance1 instanceof Childclass);
+
+       alert(instance1.parentmethod1("res:"));
+       alert(instance1.childmethod1("res:"));
+       alert(instance1.parent_property1);
+       alert(instance1.child_property1);
+      
+      
+       Childclass.prototype.parentmethod1 = function parentmethod1(arg1)
+       {
+        return arg1+"   Parent method overridden";
+        }
+        alert( instance1.parentmethod1("res: ") );
+    </script>
+
+
+</body>

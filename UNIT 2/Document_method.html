@@ -1,0 +1,19 @@
+Examples For Document method
+<html>
+  <head>
+    <title>Change the Background</title>
+  </head>
+  <body>
+    <script>
+      function background() {
+        var color = document.bg.color.value;
+        document.body.style.backgroundColor = color;
+      }
+    </script>
+    <form name="bg">
+      Type the Color Name:<input type="text" name="color" size="20" /><br />
+      Click the Submit Button to change this Background color as your Color.<br />
+      <input type="button" value="Submit" onClick="background()" />
+    </form>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mobile>
+	<company>
+		<name>Xaiomi</name>
+		<model>11 Ultra</model>
+		<price>50000</price>
+		<os>Android 10</os>
+	</company>
+	<company>
+		<name>Apple</name>
+		<model>13 pro</model>
+		<price>90000</price>
+		<os>IOS</os>
+	</company>
+	<company>
+		<name>Samsung</name>
+		<model>Galaxy</model>
+		<price>90000</price>
+		<os>Ansroid 10</os>
+	</company>
+</mobile>

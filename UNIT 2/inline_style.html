@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Add Inline Styles to an Element</title>
+</head>
+<body>
+    <p id="intro">This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+    <button type="button" onclick="setStyle()">Set intro paragraph styles</button>
+      
+    <script>
+    function setStyle() {
+        // Selecting element
+        var elem = document.getElementById("intro");
+         
+        // Appling styles on element
+        elem.style.color = "blue";
+        elem.style.fontSize = "18px";
+        elem.style.fontWeight = "bold";
+    }
+    </script>
+</body>
+</html>

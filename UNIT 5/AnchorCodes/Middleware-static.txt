@@ -1,0 +1,11 @@
+//middleware static 
+var express = require('express');
+//const path=require('path');
+var app = express();
+//const router = express.Router();
+app.use(express.static('folder1'));
+  app.listen(process.env.port || 3000);
+  
+  console.log('Running at Port 3000');
+
+//folder1 contains html,css,img files

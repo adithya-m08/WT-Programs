@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+    <title>
+       Objects
+    </title>
+</head>
+<body>
+   <script >
+function Student() {
+    this.name = 'John';
+    this.gender = 'M';
+}
+
+Student.prototype.sayHi = function(){
+    alert("Hi");
+};
+
+var studObj = new Student();
+studObj.toString();
+ </script>
+
+
+</body>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Example for setInterval() and clearInterval().</p>
+
+<button onclick="stopColor()">Stop Toggling</button>
+
+<script>
+var myVar = setInterval(setColor, 300);
+ 
+function setColor() {
+  var x = document.body;
+  x.style.backgroundColor = x.style.backgroundColor == "blue" ? "purple" : "blue";
+}
+ 
+function stopColor() {
+  clearInterval(myVar);
+}
+</script>
+
+</body>
+</html>
