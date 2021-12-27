@@ -1,19 +1,21 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>jQuery.post demo</title>
-  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-</head>
-<body>
- 
- 
-<script>
-$.post( "test.php", { func: "getNameAndTime" }, function( data ) {
-  console.log( data.name ); // John
-  console.log( data.time ); // 2pm
-}, "json");
-</script>
- 
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>jQuery.post demo</title>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  </head>
+  <body>
+    <script>
+      $.post(
+        "test.php",
+        { func: "getNameAndTime" },
+        function (data) {
+          console.log(data.name); // John
+          console.log(data.time); // 2pm
+        },
+        "json"
+      );
+    </script>
+  </body>
 </html>

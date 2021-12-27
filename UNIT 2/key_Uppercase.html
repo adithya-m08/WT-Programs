@@ -1,18 +1,17 @@
 <html>
-<body>
-<h1>KeyUp Event</h1>
+  <body>
+    <h1>KeyUp Event</h1>
 
-<label>Name:
-    <input type="text" id="event">
-</label>
-<script>
-document.getElementById("event").addEventListener("keyup", message, false);
-function message() 
-{
-    var x = document.getElementById("event");
-    x.value = x.value.toUpperCase();
-}
-</script>
-
-</body>
+    <label
+      >Name:
+      <input type="text" id="event" />
+    </label>
+    <script>
+      document.getElementById("event").addEventListener("keyup", message, false);
+      function message() {
+        var x = document.getElementById("event");
+        x.value = x.value.toUpperCase();
+      }
+    </script>
+  </body>
 </html>

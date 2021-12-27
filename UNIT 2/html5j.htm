@@ -1,26 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head>
-   <title>Get My Location</title>
-</head>
-<body>
+  <head>
+    <title>Get My Location</title>
+  </head>
+  <body>
     <button onclick="geoloc()">Click here to know your location</button>
     <p id="id1"></p>
     <script>
-        var x = document.getElementById("id1")
-        function geoloc(){
-            if(navigator.geolocation){
-                navigator.geolocation.getCurrentPosition(showposition);
-            }
-            else
-            {
-                x.innerHTML = "Geolocation not supported in your browser";
-            }
+      var x = document.getElementById("id1");
+      function geoloc() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showposition);
+        } else {
+          x.innerHTML = "Geolocation not supported in your browser";
         }
-        function showposition(pos){
-            x.innerHTML = "Latitude: " +pos.coords.latitude+ 
-            "<br> Logitude: "+pos.coords.longitude;
-        }
+      }
+      function showposition(pos) {
+        x.innerHTML = "Latitude: " + pos.coords.latitude + "<br> Logitude: " + pos.coords.longitude;
+      }
     </script>
-</body>
+  </body>
 </html>

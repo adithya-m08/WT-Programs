@@ -1,26 +1,24 @@
 <!DOCTYPE html>
 <html>
-<body>
+  <body>
+    <ul id="myList">
+      <li>Cake</li>
+      <li>Sandwich</li>
+    </ul>
 
-<ul id="myList">
-  <li>Cake</li>
-  <li>Sandwich</li>
-</ul>
+    <p>Click the button to insert an item to the list.</p>
 
-<p>Click the button to insert an item to the list.</p>
+    <button onclick="myFunction()">ClickMe !!!</button>
 
-<button onclick="myFunction()">ClickMe !!!</button>
+    <script>
+      function myFunction() {
+        var newItem = document.createElement("li");
+        var textnode = document.createTextNode("Ice Cream");
+        newItem.appendChild(textnode);
 
-<script>
-function myFunction() {
-  var newItem = document.createElement("li");
-  var textnode = document.createTextNode("Ice Cream");
-  newItem.appendChild(textnode);
-
-  var list = document.getElementById("myList");
-  list.insertBefore(newItem, list.childNodes[2]);
-}
-</script>
-
-</body>
+        var list = document.getElementById("myList");
+        list.insertBefore(newItem, list.childNodes[2]);
+      }
+    </script>
+  </body>
 </html>

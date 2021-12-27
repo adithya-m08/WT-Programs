@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html>
-<body>
+  <body>
+    <h2 class="example">This example heading</h2>
+    <p class="example">A example paragraph</p>
 
-<h2 class="example">This example heading</h2>
-<p class="example">A example paragraph</p> 
+    <p>Click the button to add a background color all elements with class="example".</p>
 
-<p>Click the button to add a background color all elements with class="example".</p>
+    <button onclick="myFunction()">Try it</button>
 
-<button onclick="myFunction()">Try it</button>
-
-<script>
-function myFunction() {
-  var x, i;
-  x = document.querySelectorAll(".example");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.backgroundColor = "green";
-  }
-}
-</script>
-
-</body>
+    <script>
+      function myFunction() {
+        var x, i;
+        x = document.querySelectorAll(".example");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.backgroundColor = "green";
+        }
+      }
+    </script>
+  </body>
 </html>

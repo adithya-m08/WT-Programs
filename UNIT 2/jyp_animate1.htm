@@ -1,42 +1,45 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>animate demo</title>
-  <style>
-  div {
-    position: relative;
-    background-color: #abc;
-    width: 40px;
-    height: 40px;
-    float: left;
-    margin: 5px;
-  }
-  </style>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-</head>
-<body>
- 
-<p><button id="go">Run »</button></p>
-<div class="block"></div>
-<div class="block"></div>
-<div class="block"></div>
-<div class="block"></div>
-<div class="block"></div>
-<div class="block"></div>
- 
-<script>
-$( "#go" ).click(function() {
-  $( ".block" ).first().animate({
-    left: 100
-  }, {
-    duration: 1000,
-    step: function( now, fx ){
-      $( ".block" ).slice( 20 ).css( "left", now );
-    }
-  });
-});
-</script>
- 
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>animate demo</title>
+    <style>
+      div {
+        position: relative;
+        background-color: #abc;
+        width: 40px;
+        height: 40px;
+        float: left;
+        margin: 5px;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <p><button id="go">Run »</button></p>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+
+    <script>
+      $("#go").click(function () {
+        $(".block")
+          .first()
+          .animate(
+            {
+              left: 100,
+            },
+            {
+              duration: 1000,
+              step: function (now, fx) {
+                $(".block").slice(20).css("left", now);
+              },
+            }
+          );
+      });
+    </script>
+  </body>
 </html>

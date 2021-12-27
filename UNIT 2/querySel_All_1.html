@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html>
-<body>
+  <body>
+    <p>This is a p element.</p>
 
-<p>This is a p element.</p>
+    <p>This is also a p element.</p>
 
-<p>This is also a p element.</p>
+    <p>Click the button to add a background color to the first p element (index 0) in the document.</p>
 
-<p>Click the button to add a background color to the first p element (index 0) in the document.</p>
+    <button onclick="myFunction()">Try it</button>
 
-<button onclick="myFunction()">Try it</button>
-
-<script>
-function myFunction() {
-  var x = document.querySelectorAll("p");
-  x[0].style.backgroundColor = "red";
-}
-</script>
-
-</body>
+    <script>
+      function myFunction() {
+        var x = document.querySelectorAll("p");
+        x[0].style.backgroundColor = "red";
+      }
+    </script>
+  </body>
 </html>

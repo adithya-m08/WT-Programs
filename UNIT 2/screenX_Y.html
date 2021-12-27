@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html>
-<body>
+  <body>
+    <h2 onclick="showCoords(event)">Screen coordinates and the value.</h2>
+    <p id="demo"></p>
 
-<h2 onclick="showCoords(event)">Screen coordinates and the value.</h2>
-<p id="demo"></p>
-
-<script>
-function showCoords(event) {
-  var x = event.screenX;
-  var y = event.screenY;
-  var coords = "X coords: " + x + ", Y coords: " + y
-  document.getElementById("demo").innerHTML = coords;
-}
-</script>
-
-</body>
+    <script>
+      function showCoords(event) {
+        var x = event.screenX;
+        var y = event.screenY;
+        var coords = "X coords: " + x + ", Y coords: " + y;
+        document.getElementById("demo").innerHTML = coords;
+      }
+    </script>
+  </body>
 </html>

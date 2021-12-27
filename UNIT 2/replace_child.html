@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>JavaScript Replace an Element with another Element in the DOM</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="main">
-		<h1 id="title">Hello World!</h1>
-		<p id="hint">This is a simple paragraph.</p>
-	</div>
-	
+      <h1 id="title">Hello World!</h1>
+      <p id="hint">This is a simple paragraph.</p>
+    </div>
+
     <button type="button" onclick="replaceParagraph()">Replace Paragraph</button>
-	
-	<script>
-    function replaceParagraph() {
+
+    <script>
+      function replaceParagraph() {
         var parentElem = document.getElementById("main");
         var oldPara = document.getElementById("hint");
 
@@ -24,7 +24,7 @@
 
         // Replacing old paragraph with newly created paragraph
         parentElem.replaceChild(newPara, oldPara);
-    }	
-	</script>
-</body>
+      }
+    </script>
+  </body>
 </html>

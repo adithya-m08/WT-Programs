@@ -1,57 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<title>jQuery Get a Form Field Value</title>
-<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-<script>
-$(document).ready(function(){
-    $("button.get-name").click(function(){
-        var name = $("#name").val();
-        alert(name);
-    });
-    $("button.get-comment").click(function(){
-        var comment = $("#comment").val();
-        alert(comment);
-    });
-    $("button.get-city").click(function(){
-        var city = $("#city").val();
-        alert(city);
-    });
-});
-</script>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <title>jQuery Get a Form Field Value</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("button.get-name").click(function () {
+          var name = $("#name").val();
+          alert(name);
+        });
+        $("button.get-comment").click(function () {
+          var comment = $("#comment").val();
+          alert(comment);
+        });
+        $("button.get-city").click(function () {
+          var city = $("#city").val();
+          alert(city);
+        });
+      });
+    </script>
+  </head>
+  <body>
     <form>
-        <table>
-            <th> Details</th>
-            <tr>
-                <td>Name:</td>
-                <td>
-                    <input type="text" id="name">
-                </td>
-            </tr>
-            <tr>
-                <td>Comments:</td>
-                <td>
-                    <textarea rows="4" cols="30" id="comment"></textarea>
-                </td>
-            </tr>
-            <tr>
-                <td>City:</td>
-                <td>
-                    <select id="city">
-                        <option>London</option>
-                        <option>Paris</option>
-                        <option>New York</option>
-                    </select>
-                </td>
-            </tr>
-        </table>
+      <table>
+        <th>Details</th>
+        <tr>
+          <td>Name:</td>
+          <td>
+            <input type="text" id="name" />
+          </td>
+        </tr>
+        <tr>
+          <td>Comments:</td>
+          <td>
+            <textarea rows="4" cols="30" id="comment"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td>City:</td>
+          <td>
+            <select id="city">
+              <option>London</option>
+              <option>Paris</option>
+              <option>New York</option>
+            </select>
+          </td>
+        </tr>
+      </table>
     </form>
     <p><strong>Note:</strong> Fill the above form and click the following button to get the value.</p>
     <button type="button" class="get-name">Get Name</button>
     <button type="button" class="get-comment">Get Comment</button>
     <button type="button" class="get-city">Get City</button>
-</body>
+  </body>
 </html>

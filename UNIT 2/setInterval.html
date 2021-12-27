@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html>
-<body>
+  <body>
+    <p>Example for setInterval</p>
+    <p id="demo"></p>
 
-<p>Example for setInterval</p>
-<p id="demo"></p>
+    <script>
+      var myVar = setInterval(myTimer, 1000);
 
-<script>
-var myVar = setInterval(myTimer, 1000);
-
-function myTimer() {
-  var d = new Date();
-  var t = d.toLocaleTimeString();
-  document.getElementById("demo").innerHTML = t;
-}
-</script>
-
-</body>
+      function myTimer() {
+        var d = new Date();
+        var t = d.toLocaleTimeString();
+        document.getElementById("demo").innerHTML = t;
+      }
+    </script>
+  </body>
 </html>

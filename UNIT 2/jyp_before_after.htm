@@ -1,30 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<style>
-    img{
-    width:fit-content;
-}
-</style>
-<script>
-$(document).ready(function(){
-  $("#btn1").click(function(){
-    $("img").before("<b>Before</b>");
-  });
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+      img {
+        width: fit-content;
+      }
+    </style>
+    <script>
+      $(document).ready(function () {
+        $("#btn1").click(function () {
+          $("img").before("<b>Before</b>");
+        });
 
-  $("#btn2").click(function(){
-    $("img").after("<i>After</i>");
-  });
-});
-</script>
-</head>
-<body>
+        $("#btn2").click(function () {
+          $("img").after("<i>After</i>");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <img src="travel.jpeg" alt="travelwoman" width="100" height="140" /><br /><br />
 
-<img src="travel.jpeg" alt="travelwoman" width="100" height="140"><br><br>
-
-<button id="btn1">Insert before</button>
-<button id="btn2">Insert after</button>
-
-</body>
+    <button id="btn1">Insert before</button>
+    <button id="btn2">Insert after</button>
+  </body>
 </html>

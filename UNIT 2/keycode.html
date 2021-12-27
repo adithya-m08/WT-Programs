@@ -1,18 +1,15 @@
 <html>
-<body>
-<h1>Keycode</h1>
-<script>
-document.addEventListener("keydown", checkKeyPressed, false);
+  <body>
+    <h1>Keycode</h1>
+    <script>
+      document.addEventListener("keydown", checkKeyPressed, false);
 
-function checkKeyPressed(e) 
-{
-	if (e.keyCode === 66) 
-    {
-		alert("The 'b' key is pressed.");
-		console.log(e);
-	}
-}
-</script>
-
-</body>
+      function checkKeyPressed(e) {
+        if (e.keyCode === 66) {
+          alert("The 'b' key is pressed.");
+          console.log(e);
+        }
+      }
+    </script>
+  </body>
 </html>

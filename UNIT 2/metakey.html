@@ -1,27 +1,21 @@
 <html>
-<body>
-<h1>Metakey Event</h1>
+  <body>
+    <h1>Metakey Event</h1>
 
-<label>Name:
-    <input type="text" id="event">
-</label>
-<p id="event1"></p>
-<script>
-document.getElementById("event").addEventListener("keydown", message, false);
-function message(event) 
-{
-  var x = document.getElementById("event1");
-  if (event.metaKey) 
-  {
-    x.innerHTML = "The META key was pressed!";
-    console.log(event);
-  } 
-  else 
-  {
-    x.innerHTML = "The META key was NOT pressed!";
-  }
-}
-</script>
-
-</body>
+    <label> Name:</label>
+    <input type="text" id="event" />
+    <p id="event1"></p>
+    <script>
+      document.getElementById("event").addEventListener("keydown", message, false);
+      function message(event) {
+        var x = document.getElementById("event1");
+        if (event.metaKey) {
+          x.innerHTML = "The META key was pressed!";
+          console.log(event);
+        } else {
+          x.innerHTML = "The META key was NOT pressed!";
+        }
+      }
+    </script>
+  </body>
 </html>

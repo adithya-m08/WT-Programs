@@ -1,34 +1,30 @@
 <!DOCTYPE html>
 <head>
-    <title>
-   
-    </title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <style>
-        p{
-            padding: 20px;
-            text-decoration: solid;
-            font-size: larger;
-        }
-    </style>
-<script >
-$(document).ready(function(){
-  $("p").on({
-    mouseenter: function(){
-      $(this).css("background-color", "Blue");
-    },  
-    mouseleave: function(){
-      $(this).css("background-color", "red");
-    }, 
-    click: function(){
-      $(this).css("background-color", "yellow");
-    }  
-  });
-});
-</script>
+  <title> </title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <style>
+    p {
+      padding: 20px;
+      text-decoration: solid;
+      font-size: larger;
+    }
+  </style>
+  <script>
+    $(document).ready(function () {
+      $("p").on({
+        mouseenter: function () {
+          $(this).css("background-color", "Blue");
+        },
+        mouseleave: function () {
+          $(this).css("background-color", "red");
+        },
+        click: function () {
+          $(this).css("background-color", "yellow");
+        },
+      });
+    });
+  </script>
 </head>
 <body>
-   
-    <p id="p1">hi this is for mouseenter and mouseleave</p>
-    
+  <p id="p1">hi this is for mouseenter and mouseleave</p>
 </body>

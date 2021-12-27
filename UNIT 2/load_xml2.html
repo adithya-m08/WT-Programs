@@ -1,40 +1,38 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>XmlHttpRequest</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Display XML data in a table</h1>
     <button onclick="loadxml()">Display</button>
     <table id="id1"></table>
     <script>
-        function loadxml(){
-            var xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = function(){
-                if(this.readyState ==4 && this.status == 200)
-                {
-                    newfunction(this);
-                }
-            }
-            xhr.open("GET","new3.xml",true)
-            xhr.send();
+      function loadxml() {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            newfunction(this);
+          }
+        };
+        xhr.open("GET", "new3.xml", true);
+        xhr.send();
+      }
+      function newfunction(xml) {
+        var i;
+        var xmldoc = xml.responseXML;
+        var table = "<tr><th>Name</th><th>Price</th></tr>";
+        var x = xmldoc.getElementsByTagName("company");
+        for (i = 0; i < x.length; i++) {
+          table +=
+            "<tr><td>" +
+            x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue +
+            "</td><td>" +
+            x[i].getElementsByTagName("price")[0].childNodes[0].nodeValue +
+            "</td></tr>";
         }
-        function newfunction(xml)
-        {
-            var i;
-            var xmldoc = xml.responseXML;
-            var table = "<tr><th>Name</th><th>Price</th></tr>"
-            var x = xmldoc.getElementsByTagName("company");
-            for(i=0;i<x.length;i++)
-            {
-                table +="<tr><td>"+
-                x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue +
-                "</td><td>"+
-                x[i].getElementsByTagName("price")[0].childNodes[0].nodeValue +
-                "</td></tr>";
-            }
-            document.getElementById("id1").innerHTML = table;
-        }
+        document.getElementById("id1").innerHTML = table;
+      }
     </script>
-</body>
+  </body>
 </html>

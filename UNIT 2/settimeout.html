@@ -1,32 +1,22 @@
 <!DOCTYPE html>
-<head>
-    
-  
-</head>
+<head> </head>
 <body>
+  <script>
+    // program to display time every 3 seconds
+    function showTime() {
+      // return new date and time
+      let dateTime = new Date();
 
-<script >
-// program to display time every 3 seconds
-function showTime() {
+      // returns the current local time
+      let time = dateTime.toLocaleTimeString();
 
-// return new date and time
-let dateTime= new Date();
+      console.log(time);
 
-// returns the current local time
-let time = dateTime.toLocaleTimeString();
+      // display the time after 3 seconds
+      setTimeout(showTime, 3000);
+    }
 
-console.log(time)
-
-// display the time after 3 seconds
- setTimeout(showTime, 3000);
-}
-
-// calling the function
-showTime();
-      
-       </script>
+    // calling the function
+    showTime();
+  </script>
 </body>
-
-
-
-

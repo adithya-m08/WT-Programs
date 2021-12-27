@@ -1,39 +1,29 @@
 <html>
-    <head>
-        <title> addEventListener!</title>
-        
-        <script>
-        document.addEventListener("mouseover", changecolor, false);
-        document.addEventListener("mouseout", changecolor1, false);
-        function changecolor()
-        {
-            var data=document.getElementById("image1");
-            data.setAttribute("width","750");
-            data.setAttribute("height","500");
-            data.src="pic2.jpg";
-        }
-        function changecolor1()
-        {
-            var data=document.getElementById("image1");
-            data.setAttribute("width","750");
-            data.setAttribute("height","500");
-            data.src="pic1.jpg";
-        }
-        </script>
-        
-    </head>
-    <body>
-      
-        <h1>addEventListener function </h1>
-        <img id="image1" src="pic1.jpg" alt="unavailable"/></br>
-    </body>
+  <head>
+    <title>addEventListener!</title>
 
+    <script>
+      document.addEventListener("mouseover", changecolor, false);
+      document.addEventListener("mouseout", changecolor1, false);
+      function changecolor() {
+        var data = document.getElementById("image1");
+        data.setAttribute("width", "750");
+        data.setAttribute("height", "500");
+        data.src = "pic2.jpg";
+      }
+      function changecolor1() {
+        var data = document.getElementById("image1");
+        data.setAttribute("width", "750");
+        data.setAttribute("height", "500");
+        data.src = "pic1.jpg";
+      }
+    </script>
+  </head>
+  <body>
+    <h1>addEventListener function</h1>
+    <img id="image1" src="pic1.jpg" alt="unavailable" /><br />
+  </body>
 </html>
-
-
-
-
-
 
 <!--  <a href="www.google.com" id="event" style="font-size: 2em">reference link</a></br>
         <input type="button" value="click "id="event1"/> -->

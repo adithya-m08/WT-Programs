@@ -1,39 +1,38 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Fetch</title>
-		<script>
-			var resp;
-			function fetchdata(){
-				mydiv = document.querySelector("#container");
-				fetch('shuttle.mp4') 		// returns a promise that resolves on response object
-				.then(function(response) { 
-					resp = response;
-					return response.text();  // returns a promise that resolves on text response
-					// other alternatives
-					// response.json()
-					// response.blob()
-				})
-				.then(function(text) {
-					mydiv.innerHTML = text;
-				
-				/*	mydiv.innerHTML = obj.srn; */
-				
-				/*	vid = document.createElement("video");
+  <head>
+    <title>Fetch</title>
+    <script>
+      var resp;
+      function fetchdata() {
+        mydiv = document.querySelector("#container");
+        fetch("shuttle.mp4") // returns a promise that resolves on response object
+          .then(function (response) {
+            resp = response;
+            return response.text(); // returns a promise that resolves on text response
+            // other alternatives
+            // response.json()
+            // response.blob()
+          })
+          .then(function (text) {
+            mydiv.innerHTML = text;
+
+            /*	mydiv.innerHTML = obj.srn; */
+
+            /*	vid = document.createElement("video");
 					vid.controls = true;
 					vid.src = URL.createObjectURL(obj);
 					mydiv.appendChild(vid); 
 				*/
-				})
-				.catch(function(error){
-					console.log(error.message)
-				});
-
-			}
-		</script>
-	</head>
-	<body>
-		<button onclick="fetchdata()">Fetch Data</button>
-		<div id="container"></div>
-	</body>
+          })
+          .catch(function (error) {
+            console.log(error.message);
+          });
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="fetchdata()">Fetch Data</button>
+    <div id="container"></div>
+  </body>
 </html>

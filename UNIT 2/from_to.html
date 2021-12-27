@@ -1,28 +1,22 @@
 <!DOCTYPE html>
 <head>
-    <title>
-   
-    </title>
+  <title> </title>
 </head>
 <body>
-   
-      
-       <script >
-  function printNumbers(from, to) {
-  let current = from;
+  <script>
+    function printNumbers(from, to) {
+      let current = from;
 
-  let timerId = setInterval(function() {
-    alert(current);
-    if (current == to) {
-      clearInterval(timerId);
+      let timerId = setInterval(function () {
+        alert(current);
+        if (current == to) {
+          clearInterval(timerId);
+        }
+        current++;
+      }, 1000);
     }
-    current++;
-  }, 1000);
-}
 
-// usage:
-printNumbers(5, 10)
-    
-     
-       </script>
+    // usage:
+    printNumbers(5, 10);
+  </script>
 </body>

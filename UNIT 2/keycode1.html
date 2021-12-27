@@ -1,34 +1,31 @@
 <html>
-<body>
-<h1>Keycode</h1>
-<p id="event"></p>
-<script>
-document.addEventListener("keydown", checkKeyPressed, false);
+  <body>
+    <h1>Keycode</h1>
+    <p id="event"></p>
+    <script>
+      document.addEventListener("keydown", checkKeyPressed, false);
 
-function checkKeyPressed(e) 
-{
-    var x = document.getElementById("event");
-	switch(e.keyCode) 
-    {
-		case 37:
-			x.innerHTML += "Left Key pressed!</br>";
-			console.log(e);
-			break;
-		case 38:
-			x.innerHTML += "Up Key pressed!</br>";
-			console.log(e);
-			break;
-		case 39:
-			x.innerHTML += "Right Key pressed!</br>";
-			console.log(e);
-			break;
-		case 40:
-			x.innerHTML += "Down Key pressed!</br>";
-			console.log(e);
-			break;	
-    }
-}
-</script>
-
-</body>
+      function checkKeyPressed(e) {
+        var x = document.getElementById("event");
+        switch (e.keyCode) {
+          case 37:
+            x.innerHTML += "Left Key pressed!</br>";
+            console.log(e);
+            break;
+          case 38:
+            x.innerHTML += "Up Key pressed!</br>";
+            console.log(e);
+            break;
+          case 39:
+            x.innerHTML += "Right Key pressed!</br>";
+            console.log(e);
+            break;
+          case 40:
+            x.innerHTML += "Down Key pressed!</br>";
+            console.log(e);
+            break;
+        }
+      }
+    </script>
+  </body>
 </html>

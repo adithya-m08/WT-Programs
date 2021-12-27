@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<title>jQuery Set Form Fields Values</title>
-<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-<script>
-$(document).ready(function(){
-    $("button").click(function(){
-        var text = $(this).text();
-        $('input[type="text"]').val(text);
-    });
-});
-</script>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <title>jQuery Set Form Fields Values</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("button").click(function () {
+          var text = $(this).text();
+          $('input[type="text"]').val(text);
+        });
+      });
+    </script>
+  </head>
+  <body>
     <button type="button">Mint Chocolate Chip</button>
     <button type="button">Chocolate Brownie</button>
     <button type="button">Kulfi</button>
     <p><strong>Note:</strong> Click the above buttons to set the value of following input box.</p>
     <p>
-        <input type="text">
+      <input type="text" />
     </p>
-</body>
+  </body>
 </html>
